@@ -1,0 +1,36 @@
+
+
+body {
+    color: $body_font_color;
+    background-color: #fcfbf8;
+    font-size: 16px;
+}
+
+.title {
+    font-size: 32px;
+}
+.big-title {
+    font-size: 42px;
+    &.text-center {
+        margin-top: 180px;
+    }
+}
+.sub-title {
+    font-family: $alt_font_family;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: -20px;
+}
+[class*="title"] {
+    margin-bottom: 40px;
+}
+.text-center {
+    text-align: center;
+}
+.big-text {
+    font-size: 24px;
+}
+p {
+    margin-bottom: 40px;
+}
