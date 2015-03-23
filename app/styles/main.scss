@@ -7,7 +7,7 @@
 @import "variables";
 @import "typography";
 @import "header";
-@import "footer";
+@import "forms";
 
 
 .browserupgrade {
@@ -17,11 +17,9 @@
   padding: 0.2em 0;
 }
 
-
 .container {
   width: $container_width;
 }
-
 
 hr {
   border-top: 2px solid $border_color;
@@ -36,8 +34,69 @@ hr {
   padding: 0 26px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.highlight_msg {
+  border: 1px solid $border_color;
+  border-radius: 4px;
+  background: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  dt, dd {
+    font-weight: 700;
+    font-size: 20px;
+    float: left;
+  }
+  dt {
+    color: $highlight_font_color;
+    clear: left;
+  }
+  dd {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav-tabs {
+  border-bottom: 2px solid $border_color;
+
+  > li {
+    margin-right: 4%;
+    > a {
+      margin-right: 0;
+      line-height: 60px;
+      border: 0;
+      text-decoration: none;
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $body_font_color;
+        background-color: transparent;
+        border: 0;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+
+.nav {
+  > li {
+    > a {
+      padding: 0;
+      white-space: nowrap;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 

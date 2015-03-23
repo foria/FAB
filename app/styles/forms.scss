@@ -1,0 +1,65 @@
+fieldset {
+    position: relative;
+    margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    + hr {
+        margin-top: -10px;
+    }
+}
+
+input {
+    & ~ p {
+        margin-top: 25px;
+        margin-bottom: 0;
+        font-style: italic;
+    }
+
+    + .confirm_msg {
+        margin-left: 30px;
+    }
+}
+
+input[type=checkbox], input[type=radio] {
+    z-index: -1000;
+    position: absolute;
+    left: -1000px;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    + label {
+        display: inline-block;
+        height: 28px;
+        padding-left: 45px;
+        font-size: 16px;
+        vertical-align: middle;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-image: url(../images/checkbox.png);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-user-select: none;
+    }
+    &:checked + label {
+        background-position: 0 -28px;
+    }
+}
+
+input[type='text'] {
+    border: 1px solid $border_color_forms;
+    border-radius: 4px;
+    line-height: 60px;
+    padding: 0 20px;
+    label + & {
+        margin-left: 30px;
+    }
+}
