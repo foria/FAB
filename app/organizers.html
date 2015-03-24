@@ -58,8 +58,8 @@
           <ul class="nav nav-tabs">
             <li><a href="#buy" data-toggle="tab">Buy The Book</a></li>
             <li><a href="#basic_info" data-toggle="tab">Basic Info</a></li>
-            <li class="active"><a href="#album_settings" data-toggle="tab">Album Settings</a></li>
-            <li><a href="#delivery_options" data-toggle="tab">Delivery Options</a></li>
+            <li><a href="#album_settings" data-toggle="tab">Album Settings</a></li>
+            <li class="active"><a href="#delivery_options" data-toggle="tab">Delivery Options</a></li>
             <li><a href="#messages" data-toggle="tab">Messages</a></li>
             <li><a href="#contributors" data-toggle="tab">Contributors</a></li>
             <li><a href="#delete" data-toggle="tab">Delete</a></li>
@@ -67,13 +67,40 @@
 
           <div class="tab-content">
             <form role="tabpanel" class="tab-pane" id="buy">...</form>
-            <form role="tabpanel" class="tab-pane" id="basic_info">...</form>
-            <form role="tabpanel" class="tab-pane active" id="album_settings">
+            <form role="tabpanel" class="tab-pane" id="basic_info">
+                <h2 class="second-title">Basic Information:</h2>
+                <div class="row">
+                  <fieldset class="col-xs-6">
+                      <label for="name">Your Name:</label>
+                      <input type="text" id="name" name="name" placeholder="Your Name">
+                  </fieldset>
+                  <fieldset class="col-xs-6">
+                      <label for="email">Your Email:</label>
+                      <input type="text" id="email" name="email" placeholder="Email Address">
+                  </fieldset>
+                  <fieldset class="col-xs-6">
+                      <label for="rec_name">Your Recipient’s Name:</label>
+                      <input type="text" id="rec_name" name="rec_name" placeholder="Recipient Name">
+                  </fieldset>
+                  <fieldset class="col-xs-6">
+                      <label for="their_email">Their Email Address:</label>
+                      <input type="text" id="their_email" name="their_email" placeholder="Email Address">
+                  </fieldset>
+                  <fieldset class="col-xs-12">
+                      <label for="nickname">What Is A Short Way to Refer to Them?:</label>
+                      <input type="text" id="nickname" name="nickname" placeholder="Nickname">
+                  </fieldset>
+                  <fieldset class="col-xs-12">
+                    <input class="btn" type="submit" value="SAVE THESE CHANGES">
+                  </fieldset>
+                </div>
+            </form>
+            <form role="tabpanel" class="tab-pane" id="album_settings">
               <h2 class="second-title">Album Options:</h2>
               <fieldset>
                 <input type="checkbox" id="group_pwd" name="group_pwd" value="yes">
                 <label for="group_pwd">Writers Must Provide This Password:</label>
-                <input type="text" value="Bourne">
+                <input type="text" value="Bourne" class="inline-input">
                 <p>If you unselect this option, anyone with a link to the album will be able to write a letter. This makes it easier to collect letters, but please make sure that the link is distributed carefully. <br>The address is <a href="">https://forefathers.fromabirdie.com/letters/new</a></p>
               </fieldset>
               <fieldset>
@@ -107,8 +134,42 @@
                 <input class="btn" type="submit" value="SAVE THESE CHANGES">
               </fieldset>
             </form>
-            <form role="tabpanel" class="tab-pane" id="delivery_options">...</form>
-            <form role="tabpanel" class="tab-pane" id="messages">...</form>
+            <form role="tabpanel" class="tab-pane active" id="delivery_options">
+                <h2 class="second-title">Delivery Options:</h2>
+                <div class="row">
+                    <fieldset class="col-xs-6">
+                        <input type="checkbox" id="send_notification" name="send_notification" value="yes">
+                        <label for="send_notification">Send an email announcing the album to Jane</label>
+                    </fieldset>
+                    <fieldset class="col-xs-6 newrow">
+                        <label>When should we send the album to the recipient?</label>
+                    </fieldset>
+                    <fieldset class="col-xs-6 newrow">
+                        <label>On:</label>
+                    </fieldset>
+                    <fieldset class="col-xs-6 newrow">
+                        <label>At:</label>
+                    </fieldset>
+                </div>
+            </form>
+            <form role="tabpanel" class="tab-pane" id="messages">
+                <h2 class="second-title">Greetings and Messages:</h2>
+                <fieldset>
+                    <label for="msg1">For Walter’s friends to see before they write a letter:</label>
+                    <textarea rows="3" id="msg1" name="msg1" placeholder="This is a greeting for friends to see before they start writing"></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="msg2">What Walter will see before reading the letters:</label>
+                    <textarea rows="3" id="msg2" name="msg2" placeholder="This is a greeting for a recipient to see before reading the letters"></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="msg3">For Walter to see after reading the letters:</label>
+                    <textarea rows="3" id="msg3" name="msg3" placeholder="This is a message from the creator of the album that will follow the last letter"></textarea>
+                </fieldset>
+                  <fieldset>
+                    <input class="btn" type="submit" value="SAVE THESE CHANGES">
+                  </fieldset>
+            </form>
             <form role="tabpanel" class="tab-pane" id="contributors">...</form>
             <form role="tabpanel" class="tab-pane" id="delete">...</form>
           </div>
@@ -120,7 +181,7 @@
     <footer role="footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12"><hr><p>© 2015 From A Birdie. All Rights Reserved.</p></div>
+          <div class="col-xs-12"><hr><p class="copyright">© 2015 From A Birdie. All Rights Reserved.</p></div>
         </div>
       </div>
     </footer>

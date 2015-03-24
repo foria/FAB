@@ -1,6 +1,6 @@
 fieldset {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     &:last-child {
         margin-bottom: 0;
     }
@@ -11,8 +11,7 @@ fieldset {
 
 input {
     & ~ p {
-        margin-top: 25px;
-        margin-bottom: 0;
+        margin: 0 25px;
         font-style: italic;
     }
 
@@ -54,12 +53,24 @@ input[type=checkbox], input[type=radio] {
     }
 }
 
-input[type='text'] {
+input[type='text'], textarea {
     border: 1px solid $border_color_forms;
     border-radius: 4px;
     line-height: 60px;
     padding: 0 20px;
-    label + & {
+    display: block;
+    width: 100%;
+    &.inline-input {
+        display: inline-block;
         margin-left: 30px;
+        max-width: 209px;
     }
+}
+
+textarea {
+    background-color: white;
+}
+
+.newrow {
+    clear: left;
 }
