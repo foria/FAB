@@ -58,8 +58,8 @@
           <ul class="nav nav-tabs">
             <li><a href="#buy" data-toggle="tab">Buy The Book</a></li>
             <li><a href="#basic_info" data-toggle="tab">Basic Info</a></li>
-            <li><a href="#album_settings" data-toggle="tab">Album Settings</a></li>
-            <li class="active"><a href="#delivery_options" data-toggle="tab">Delivery Options</a></li>
+            <li class="active"><a href="#album_settings" data-toggle="tab">Album Settings</a></li>
+            <li><a href="#delivery_options" data-toggle="tab">Delivery Options</a></li>
             <li><a href="#messages" data-toggle="tab">Messages</a></li>
             <li><a href="#contributors" data-toggle="tab">Contributors</a></li>
             <li><a href="#delete" data-toggle="tab">Delete</a></li>
@@ -95,7 +95,7 @@
                   </fieldset>
                 </div>
             </form>
-            <form role="tabpanel" class="tab-pane" id="album_settings">
+            <form role="tabpanel" class="tab-pane active" id="album_settings">
               <h2 class="second-title">Album Options:</h2>
               <fieldset>
                 <input type="checkbox" id="group_pwd" name="group_pwd" value="yes">
@@ -127,14 +127,21 @@
                 <label for="forever">Accept Letters Forever</label>
               </fieldset>
               <fieldset>
-                <input type="radio" id="until_date" name="letter_accept" value="until_date">
-                <label for="until_date">Until</p>
+                <input type="radio" id="until_date-yes" name="until_date-yes" value="until_date-yes">
+                <label for="until_date-yes">Until</label>
+                <!-- START DATEPICKER -->
+                <input type="text" id="until_date" name="until_date" class="datepicker inline-input">
+                <input type="hidden" id="until_date-month">
+                <input type="hidden" id="until_date-day">
+                <input type="hidden" id="until_date-year">
+                <i class="fa fa-calendar"></i>
+                <!-- END DATEPICKER -->
               </fieldset>
               <fieldset>
                 <input class="btn" type="submit" value="SAVE THESE CHANGES">
               </fieldset>
             </form>
-            <form role="tabpanel" class="tab-pane active" id="delivery_options">
+            <form role="tabpanel" class="tab-pane" id="delivery_options">
                 <h2 class="second-title">Delivery Options:</h2>
                 <div class="row">
                     <fieldset class="col-xs-6">
@@ -145,10 +152,26 @@
                         <label>When should we send the album to the recipient?</label>
                     </fieldset>
                     <fieldset class="col-xs-6 newrow">
-                        <label>On:</label>
+                        <label class="col-xs-1 reset-left-padding">On:</label>
+                        <!-- START DATEPICKER RANGE:
+                        1. FOR DATE RANGE WRITE DATA-RANGE TOO ON INPUT VISIBLE
+                        2. THE FIRST PART OF ID NAME, BEFORE "_", MUST BE THE SAME (IN THIS CASE IS "DATE")-->
+                        <input type="text" id="date_from" name="date_from" class="datepicker inline-input" data-range="from">
+                        <input type="hidden" id="date_from-month">
+                        <input type="hidden" id="date_from-day">
+                        <input type="hidden" id="date_from-year">
+                        <i class="fa fa-calendar"></i>
+                        <!-- END DATEPICKER RANGE -->
                     </fieldset>
                     <fieldset class="col-xs-6 newrow">
-                        <label>At:</label>
+                        <label class="col-xs-1 reset-left-padding">At:</label>
+                        <!-- START DATEPICKER RANGE -->
+                        <input type="text" id="date_until" name="date_until" class="datepicker inline-input" data-range="until">
+                        <input type="hidden" id="date_until-month">
+                        <input type="hidden" id="date_until-day">
+                        <input type="hidden" id="date_until-year">
+                        <i class="fa fa-calendar"></i>
+                        <!-- END DATEPICKER RANGE -->
                     </fieldset>
                 </div>
             </form>
@@ -197,28 +220,31 @@
     </script>
 
     <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- bower:js
+    <script src="/bower_components/jquery/dist/jquery.js"></script>-->
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js scripts/plugins.js
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>-->
-        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/plugins.js
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>-->
+    <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="scripts/bootstrap-datepicker.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
