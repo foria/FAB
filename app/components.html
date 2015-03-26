@@ -152,22 +152,26 @@
                         <label>When should we send the album to the recipient?</label>
                     </fieldset>
                     <fieldset class="col-xs-6 newrow">
-                        <label class="col-xs-1 reset-left-padding" for="date">On:</label>
-                        <!-- START DATEPICKER -->
-                        <input type="text" id="date" name="date" class="datepicker inline-input">
-                        <input type="hidden" id="date-month">
-                        <input type="hidden" id="date-day">
-                        <input type="hidden" id="date-year">
+                        <label class="col-xs-1 reset-left-padding">On:</label>
+                        <!-- START DATEPICKER RANGE:
+                        1. FOR DATE RANGE WRITE DATA-RANGE TOO ON INPUT VISIBLE
+                        2. THE FIRST PART OF ID NAME, BEFORE "_", MUST BE THE SAME (IN THIS CASE IS "DATE")-->
+                        <input type="text" id="date_from" name="date_from" class="datepicker inline-input" data-range="from">
+                        <input type="hidden" id="date_from-month">
+                        <input type="hidden" id="date_from-day">
+                        <input type="hidden" id="date_from-year">
                         <i class="fa fa-calendar"></i>
-                        <!-- END DATEPICKER -->
+                        <!-- END DATEPICKER RANGE -->
                     </fieldset>
                     <fieldset class="col-xs-6 newrow">
-                        <label class="col-xs-1 reset-left-padding" for="time">At:</label>
-                        <input type="text" id="time" name="time" class="timepicker inline-input">
-                        <input type="hidden" id="time-hours">
-                        <input type="hidden" id="time-part">
-                        <input type="hidden" id="time-zone">
-                        <i class="fa fa-clock-o"></i>
+                        <label class="col-xs-1 reset-left-padding">At:</label>
+                        <!-- START DATEPICKER RANGE -->
+                        <input type="text" id="date_until" name="date_until" class="datepicker inline-input" data-range="until">
+                        <input type="hidden" id="date_until-month">
+                        <input type="hidden" id="date_until-day">
+                        <input type="hidden" id="date_until-year">
+                        <i class="fa fa-calendar"></i>
+                        <!-- END DATEPICKER RANGE -->
                     </fieldset>
                 </div>
             </form>
