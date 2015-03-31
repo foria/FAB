@@ -103,6 +103,47 @@ hr {
   }
 }
 
+.contributors_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    @include clearfix;
+    border-bottom: 2px solid $border_color;
+    &:last-child {
+      border: 0;
+    }
+  }
+  h3, p {
+    float: left;
+    clear: left;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  aside {
+    float: right;
+    line-height: 132px;
+  }
+  a {
+    text-decoration: none;
+    margin: 0 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  p, a {
+    font-size: 14px;
+  }
+}
+
+// HELPER CLASSES
+
+// to remove bottom margin in the case the element need to be attached to footer for example.
+.rbm {
+  margin-bottom: -40px;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

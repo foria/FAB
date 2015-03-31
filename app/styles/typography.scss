@@ -11,6 +11,10 @@ h1, h2, h3 {
     margin: 40px 0;
 }
 
+h3 {
+    font-size: 22px;
+}
+
 a {
     color: $body_font_color;
     text-decoration: underline;
@@ -53,6 +57,10 @@ p {
 
 .confirm_msg {
     color: $msg_font_color;
+}
+
+.highlight_text {
+    color: $highlight_font_color
 }
 
 .copyright {
