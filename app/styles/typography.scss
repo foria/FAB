@@ -12,7 +12,7 @@ h1, h2, h3 {
 }
 
 h3 {
-    font-size: 22px;
+    font-size: 26px;
 }
 
 a {
@@ -37,6 +37,17 @@ a {
     font-style: italic;
     font-weight: 400;
     margin-top: -20px;
+}
+
+.intratext-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
 }
 
 [class*="title"] {

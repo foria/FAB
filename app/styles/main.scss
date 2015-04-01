@@ -28,13 +28,6 @@ hr {
   margin-bottom: 40px;
 }
 
-.btn {
-  background-color: $highlight_font_color;
-  color: #fff;
-  line-height: 56px;
-  padding: 0 26px;
-}
-
 .highlight_msg {
   border: 1px solid $border_color;
   border-radius: 4px;
@@ -137,11 +130,50 @@ hr {
   }
 }
 
+.purchase_steps {
+  header {
+    border-bottom: 2px solid $border_color;
+    h4 {
+      font-size: 40px;
+      color: $highlight_font_color;
+      margin-top: 30px;
+    }
+    h5 {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+  section {
+    display: none;
+    @include clearfix;
+  }
+}
+
+.sortable {
+  margin: 0;
+  padding: 0;
+  li {
+    margin-bottom: 18px;
+    &:before {
+      @extend .fa;
+      content: $fa-var-arrows;
+      margin-right: 20px;
+    }
+    &:hover {
+      cursor: move;
+    }
+  }
+}
+
 // HELPER CLASSES
 
 // to remove bottom margin in the case the element need to be attached to footer for example.
 .rbm {
   margin-bottom: -40px;
+}
+// THIS ADD MARGIN TOP TO FIELDSET
+.atm {
+  margin-top: 60px;
 }
 
 

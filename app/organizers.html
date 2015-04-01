@@ -50,16 +50,119 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul class="nav nav-tabs">
-                    <li><a href="#buy" data-toggle="tab">Buy The Book</a></li>
+                    <li class="active"><a href="#buy" data-toggle="tab">Buy The Book</a></li>
                     <li><a href="#basic_info" data-toggle="tab">Basic Info</a></li>
                     <li><a href="#album_settings" data-toggle="tab">Album Settings</a></li>
                     <li><a href="#delivery_options" data-toggle="tab">Delivery Options</a></li>
                     <li><a href="#messages" data-toggle="tab">Messages</a></li>
-                    <li class="active"><a href="#contributors" data-toggle="tab">Contributors</a></li>
+                    <li><a href="#contributors" data-toggle="tab">Contributors</a></li>
                     <li><a href="#delete" data-toggle="tab">Delete</a></li>
                 </ul>
                 <div class="tab-content">
-                    <form role="tabpanel" class="tab-pane" id="buy">...</form>
+                    <form role="tabpanel" class="tab-pane active" id="buy">
+						<div class="purchase_steps">
+							<header>
+								<h4>Step <span class="step_num"></span> of <span class="step_tot"></span></h4>
+								<h5 class="step_title">Choose Format</h5>
+							</header>
+							<section data-step="1" title="Choose Format" class="active">
+								<h3>Choose book formats and number of copies:</h3>
+								<fieldset>
+									<input type="number" id="pdf_qty" title="pdf_qty" value="0" class="inline-input">
+									<label>PDF at $30 each:   Your Order $200</label>
+								</fieldset>
+								<fieldset>
+									<input type="number" id="paperback_qty" title="paperback_qty" value="0" class="inline-input">
+									<label>Paperback at $55 each :   Your Order $0</label>
+								</fieldset>
+								<fieldset>
+									<input type="number" id="hardcover_qty" title="hardcover_qty" value="0" class="inline-input">
+									<label>Hardcover at $80 each :   Your Order $0</label>
+								</fieldset>
+								<hr>
+								<button class="pull-right btn btn-red" data-step="2">CUSTOMIZE<i class="fa fa-caret-right"></i></button>
+							</section>
+							<section data-step="2" title="Customize Cover">
+								<h3>Customize the Cover of the Books</h3>
+								<p>Title of first and second lines<br>(appear in the cover below an image we choose for the book)</p>
+								<fieldset>
+									<label>First Line:</label>
+									<input type="text" id="first_line" title="first_line" placeholder="An Album Of Letters">
+								</fieldset>
+								<fieldset>
+									<label>Second Line:</label>
+									<input type="text" id="first_line" title="first_line" placeholder="For Walter White">
+								</fieldset>
+								<fieldset>
+									<label>Subtitle:</label>
+									<input type="text" id="first_line" title="first_line" placeholder="Created by Your Friends and Family">
+								</fieldset>
+								<hr>
+								<button class="btn btn-grey" data-step="1"><i class="fa fa-caret-left"></i>CHOOSE FORMAT</button>
+								<button class="pull-right btn btn-red" data-step="3">REORDER LETTERS<i class="fa fa-caret-right"></i></button>
+							</section>
+							<section data-step="3" title="Re-Order Letters">
+                                <h3>Order the Letters How You Want</h3>
+                                <p>You may drag and drop the letters to specify the order in which they should appear in the book (or just skip this step and have the letters sorted as below).</p>
+                                <ul class="sortable">
+                                    <li>Item 1</li>
+                                    <li>Item 2</li>
+                                    <li>Item 3</li>
+                                    <li>Item 4</li>
+                                </ul>
+                                <hr>
+                                <button class="btn btn-grey" data-step="2"><i class="fa fa-caret-left"></i>CUSTOMIZATION</button>
+                                <button class="pull-right btn btn-red" data-step="4">SHIPPING INFO<i class="fa fa-caret-right"></i></button>
+                            </section>
+							<section data-step="4" title="Shipping Information">
+                                <h3>Your Shipping Info:</h3>
+                                <p>Confirm Your name and Email:</p>
+                                <fieldset>
+                                    <label for="full_name">Name:</label>
+                                    <input type="text" id="full_name" title="full_name" placeholder="Full Name">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="email">Email Address:</label>
+                                    <input type="email" id="email" title="email" placeholder="Email Address">
+                                </fieldset>
+                                <p>Ship the Books to the following Address:</p>
+                                <fieldset>
+                                    <label for="dest_name">Name:</label>
+                                    <input type="text" id="dest_name" title="dest_name" placeholder="Full Name">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="dest_add_1">Address 1:</label>
+                                    <input type="text" id="dest_add_1" title="dest_add_1" placeholder="Address 1">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="dest_add_2">Address 2:</label>
+                                    <input type="text" id="dest_add_2" title="dest_add_2" placeholder="Address 2">
+                                </fieldset>
+                                <fieldset class="atm">
+                                    <label for="dest_city">City:</label>
+                                    <input type="text" id="dest_city" title="dest_city" placeholder="City" class="inline-input">
+                                    <label for="dest_state">State:</label>
+                                    <input type="text" id="dest_state" title="dest_state" placeholder="State" class="inline-input">
+                                    <label for="dest_zip">ZIP:</label>
+                                    <input type="text" id="dest_zip" title="dest_zip" placeholder="ZIP" class="inline-input">
+                                </fieldset>
+                                <hr>
+                                <button class="btn btn-grey" data-step="3"><i class="fa fa-caret-left"></i>REORDER LETTERS</button>
+                                <button class="pull-right btn btn-red" data-step="5">PAYMENT INFO<i class="fa fa-caret-right"></i></button>
+                            </section>
+							<section data-step="5" title="Your Payment Information">
+                                <h3>Your Shipping Info:</h3>
+                                <p class="atm intratext-title">We Will Ship 1 Book To:</p>
+                                <p>Jonden Jackson<br>555 Unknown Street<br>Tulsa, OK 55555</p>
+                                <hr>
+                                <p class="intratext-title">The front cover of the books will have the following<br> title / subtitle:</p>
+                                <p>An Album of Letters<br>for Jonden & Portland I Forefathers<br>CREATED BY ANITA</p>
+                                <hr>
+                                <p>The total cost (including shipping) is<span class="price">$180.50</span></p>
+                                <input type="submit" value="BUY ALBUM" class="btn btn-red">
+                            </section>
+						</div>
+                    </form>
 
                     <form role="tabpanel" class="tab-pane" id="basic_info">
                         <h2 class="second-title">Basic Information:</h2>
@@ -85,7 +188,7 @@
                                 <input type="text" id="nickname" name="nickname" placeholder="Nickname">
                             </fieldset>
                             <fieldset class="col-xs-12">
-                                <input class="btn" type="submit" value="SAVE THESE CHANGES">
+                                <input class="btn btn-red" type="submit" value="SAVE THESE CHANGES">
                             </fieldset>
                         </div>
                     </form>
@@ -110,7 +213,7 @@
                             <p>Select this option if you want to be able to remove certain Contributors from the Album</p>
                         </fieldset>
                         <fieldset>
-                            <input class="btn" type="submit" value="SAVE THESE CHANGES"><span class="confirm_msg">Your Changes Have Been Saved!</span>
+                            <input class="btn btn-red" type="submit" value="SAVE THESE CHANGES"><span class="confirm_msg">Your Changes Have Been Saved!</span>
                         </fieldset>
                         <hr>
                         <h2 class="second-title">This Albums Contributor Settings:</h2>
@@ -134,7 +237,7 @@
                             <!-- END DATEPICKER -->
                         </fieldset>
                         <fieldset>
-                            <input class="btn" type="submit" value="SAVE THESE CHANGES">
+                            <input class="btn btn-red" type="submit" value="SAVE THESE CHANGES">
                         </fieldset>
                     </form>
 
@@ -184,11 +287,11 @@
                             <textarea rows="3" id="msg3" name="msg3" placeholder="This is a message from the creator of the album that will follow the last letter"></textarea>
                         </fieldset>
                         <fieldset>
-                            <input class="btn" type="submit" value="SAVE THESE CHANGES">
+                            <input class="btn btn-red" type="submit" value="SAVE THESE CHANGES">
                         </fieldset>
                     </form>
 
-                    <form role="tabpanel" class="tab-pane active" id="contributors">
+                    <form role="tabpanel" class="tab-pane" id="contributors">
                     	<ul class="contributors_list rbm">
                     		<li>
                     			<aside>
@@ -276,6 +379,7 @@
     <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
     <script src="scripts/bootstrap-datepicker.js"></script>
     <script src="/bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="/bower_components/html5sortable/jquery.sortable.js"></script>
     <!-- <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
 	  <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
 	  <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
