@@ -96,4 +96,31 @@ $(document).ready(function() {
             })
         });
     }
+
+
+    // Sortable list init
+    // ======================
+    if($('.sortable').length){
+        $('.sortable').sortable()
+    }
+
+
+    // Purchase Steps
+    // ======================
+    if($('.purchase_steps').length){
+        var step_num = $('.purchase_steps').find('.step_num');
+        var step_tot = $('.purchase_steps').find('.step_tot');
+
+        step_num.text('1');
+        step_tot.text($('.purchase_steps').children('section').length);
+        $('.purchase_steps section[data-step="1"]').toggle();
+
+        $('.purchase_steps section').find('button').on('click', function(e){
+            e.preventDefault();
+            console.log('yo');
+            $(this).parent().toggle().parent().find('section[data-step="' + $(this).data('step') + '"]').toggle();
+            step_num.text( $(this).data('step') );
+        })
+    }
+
 })
