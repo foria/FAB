@@ -153,7 +153,7 @@
 }(jQuery);
 
 /* =========================================================
- * bootstrap-datepicker.js 
+ * bootstrap-datepicker.js
  * http://www.eyecon.ro/bootstrap-datepicker
  * =========================================================
  * Copyright 2012 Stefan Petre
@@ -170,11 +170,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================= */
- 
+
 !function( $ ) {
-	
+
 	// Picker object
-	
+
 	var Datepicker = function(element, options){
 		this.element = $(element);
 		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm/dd/yyyy');
@@ -186,7 +186,7 @@
 							});
 		this.isInput = this.element.is('input');
 		this.component = this.element.is('.date') ? this.element.find('.add-on') : false;
-		
+
 		if (this.isInput) {
 			this.element.on({
 				focus: $.proxy(this.show, this),
@@ -200,7 +200,7 @@
 				this.element.on('click', $.proxy(this.show, this));
 			}
 		}
-	
+
 		this.minViewMode = options.minViewMode||this.element.data('date-minviewmode')||0;
 		if (typeof this.minViewMode === 'string') {
 			switch (this.minViewMode) {
@@ -238,10 +238,10 @@
 		this.update();
 		this.showMode();
 	};
-	
+
 	Datepicker.prototype = {
 		constructor: Datepicker,
-		
+
 		show: function(e) {
 			this.picker.show();
 			this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
@@ -264,7 +264,7 @@
 				date: this.date
 			});
 		},
-		
+
 		hide: function(){
 			this.picker.hide();
 			$(window).off('resize', this.place);
@@ -279,7 +279,7 @@
 				date: this.date
 			});
 		},
-		
+
 		set: function() {
 			var formated = DPGlobal.formatDate(this.date, this.format);
 			if (!this.isInput) {
@@ -291,7 +291,7 @@
 				this.element.prop('value', formated);
 			}
 		},
-		
+
 		setValue: function(newDate) {
 			if (typeof newDate === 'string') {
 				this.date = DPGlobal.parseDate(newDate, this.format);
@@ -302,7 +302,7 @@
 			this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
 			this.fill();
 		},
-		
+
 		place: function(){
 			var offset = this.component ? this.component.offset() : this.element.offset();
 			this.picker.css({
@@ -310,7 +310,7 @@
 				left: offset.left
 			});
 		},
-		
+
 		update: function(newDate){
 			this.date = DPGlobal.parseDate(
 				typeof newDate === 'string' ? newDate : (this.isInput ? this.element.prop('value') : this.element.data('date')),
@@ -319,7 +319,7 @@
 			this.viewDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1, 0, 0, 0, 0);
 			this.fill();
 		},
-		
+
 		fillDow: function(){
 			var dowCnt = this.weekStart;
 			var html = '<tr>';
@@ -329,7 +329,7 @@
 			html += '</tr>';
 			this.picker.find('.datepicker-days thead').append(html);
 		},
-		
+
 		fillMonths: function(){
 			var html = '';
 			var i = 0
@@ -338,7 +338,7 @@
 			}
 			this.picker.find('.datepicker-months td').append(html);
 		},
-		
+
 		fill: function() {
 			var d = new Date(this.viewDate),
 				year = d.getFullYear(),
@@ -380,7 +380,7 @@
 			}
 			this.picker.find('.datepicker-days tbody').empty().append(html.join(''));
 			var currentYear = this.date.getFullYear();
-			
+
 			var months = this.picker.find('.datepicker-months')
 						.find('th:eq(1)')
 							.text(year)
@@ -389,7 +389,7 @@
 			if (currentYear === year) {
 				months.eq(this.date.getMonth()).addClass('active');
 			}
-			
+
 			html = '';
 			year = parseInt(year/10, 10) * 10;
 			var yearCont = this.picker.find('.datepicker-years')
@@ -404,7 +404,7 @@
 			}
 			yearCont.html(html);
 		},
-		
+
 		click: function(e) {
 			e.stopPropagation();
 			e.preventDefault();
@@ -420,7 +420,7 @@
 							case 'next':
 								this.viewDate['set'+DPGlobal.modes[this.viewMode].navFnc].call(
 									this.viewDate,
-									this.viewDate['get'+DPGlobal.modes[this.viewMode].navFnc].call(this.viewDate) + 
+									this.viewDate['get'+DPGlobal.modes[this.viewMode].navFnc].call(this.viewDate) +
 									DPGlobal.modes[this.viewMode].navStep * (target[0].className === 'prev' ? -1 : 1)
 								);
 								this.fill();
@@ -472,12 +472,12 @@
 				}
 			}
 		},
-		
+
 		mousedown: function(e){
 			e.stopPropagation();
 			e.preventDefault();
 		},
-		
+
 		showMode: function(dir) {
 			if (dir) {
 				this.viewMode = Math.max(this.minViewMode, Math.min(2, this.viewMode + dir));
@@ -485,7 +485,7 @@
 			this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).show();
 		}
 	};
-	
+
 	$.fn.datepicker = function ( option, val ) {
 		return this.each(function () {
 			var $this = $(this),
@@ -504,7 +504,7 @@
 		}
 	};
 	$.fn.datepicker.Constructor = Datepicker;
-	
+
 	var DPGlobal = {
 		modes: [
 			{
@@ -1723,6 +1723,93 @@
   $.fn.timepicker.Constructor = Timepicker;
 
 })(jQuery, window, document);
+
+/*
+ * HTML5 Sortable jQuery Plugin
+ * http://farhadi.ir/projects/html5sortable
+ *
+ * Copyright 2012, Ali Farhadi
+ * Released under the MIT license.
+ */
+(function($) {
+var dragging, placeholders = $();
+$.fn.sortable = function(options) {
+    var method = String(options);
+    options = $.extend({
+        connectWith: false
+    }, options);
+    return this.each(function() {
+        if (/^(enable|disable|destroy)$/.test(method)) {
+            var items = $(this).children($(this).data('items')).attr('draggable', method == 'enable');
+            if (method == 'destroy') {
+                items.add(this).removeData('connectWith items')
+                    .off('dragstart.h5s dragend.h5s selectstart.h5s dragover.h5s dragenter.h5s drop.h5s');
+            }
+            return;
+        }
+        var isHandle, index, items = $(this).children(options.items);
+        var placeholder = $('<' + (/^(ul|ol)$/i.test(this.tagName) ? 'li' : 'div') + ' class="sortable-placeholder">');
+        items.find(options.handle).mousedown(function() {
+            isHandle = true;
+        }).mouseup(function() {
+            isHandle = false;
+        });
+        $(this).data('items', options.items)
+        placeholders = placeholders.add(placeholder);
+        if (options.connectWith) {
+            $(options.connectWith).add(this).data('connectWith', options.connectWith);
+        }
+        items.attr('draggable', 'true').on('dragstart.h5s', function(e) {
+            if (options.handle && !isHandle) {
+                return false;
+            }
+            isHandle = false;
+            var dt = e.originalEvent.dataTransfer;
+            dt.effectAllowed = 'move';
+            dt.setData('Text', 'dummy');
+            index = (dragging = $(this)).addClass('sortable-dragging').index();
+        }).on('dragend.h5s', function() {
+            if (!dragging) {
+                return;
+            }
+            dragging.removeClass('sortable-dragging').show();
+            placeholders.detach();
+            if (index != dragging.index()) {
+                dragging.parent().trigger('sortupdate', {item: dragging});
+            }
+            dragging = null;
+        }).not('a[href], img').on('selectstart.h5s', function() {
+            this.dragDrop && this.dragDrop();
+            return false;
+        }).end().add([this, placeholder]).on('dragover.h5s dragenter.h5s drop.h5s', function(e) {
+            if (!items.is(dragging) && options.connectWith !== $(dragging).parent().data('connectWith')) {
+                return true;
+            }
+            if (e.type == 'drop') {
+                e.stopPropagation();
+                placeholders.filter(':visible').after(dragging);
+                dragging.trigger('dragend.h5s');
+                return false;
+            }
+            e.preventDefault();
+            e.originalEvent.dataTransfer.dropEffect = 'move';
+            if (items.is(this)) {
+                if (options.forcePlaceholderSize) {
+                    placeholder.height(dragging.outerHeight());
+                }
+                dragging.hide();
+                $(this)[placeholder.index() < $(this).index() ? 'after' : 'before'](placeholder);
+                placeholders.not(placeholder).detach();
+            } else if (!placeholders.is(this) && !$(this).children(options.items).length) {
+                placeholders.detach();
+                $(this).append(placeholder);
+            }
+            return false;
+        });
+    });
+};
+})(jQuery);
+
 
 /* ========================================================================
  * Bootstrap: affix.js v3.3.2
