@@ -1,0 +1,22 @@
+
+[role="footer"] {
+    ul {
+        list-style: none;
+        padding: 0;
+        line-height: 1;
+    }
+    li {
+        margin-bottom: 22px;
+    }
+    .second-title {
+        font-size: 24px;
+    }
+}
+
+[role="social-navigation"] {
+    i {
+        font-size: 22px;
+        color: $highlight_font_color;
+        margin-right: 15px;
+    }
+}

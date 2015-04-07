@@ -26,8 +26,8 @@ label {
   }
 }
 
-input[type=checkbox],
-input[type=radio] {
+[type=checkbox],
+[type=radio] {
     z-index: -1000;
     position: absolute;
     left: -1000px;
@@ -86,10 +86,6 @@ textarea,
   margin-right: 30px;
   max-width: 85px;
   text-align: center;
-}
-
-textarea {
-    background-color: white;
 }
 
 .newrow {

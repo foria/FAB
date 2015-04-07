@@ -1,0 +1,47 @@
+//$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "marketing/variables";
+@import "marketing/typography";
+@import "fontawesome/font-awesome";
+@import "marketing/header";
+@import "marketing/footer";
+@import "marketing/forms";
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.container {
+  width: $container_width;
+}
+
+[role="main"] {
+  > section {
+    padding: 50px 0;
+  }
+}
+
+// HELPER CLASSES
+
+// to remove bottom margin in the case the element need to be attached to footer for example.
+.rbm {
+  margin-bottom: -40px;
+}
+// THIS ADD MARGIN TOP TO FIELDSET
+.atm {
+  margin-top: 60px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+}

@@ -1,0 +1,76 @@
+
+
+body {
+    color: $body_font_color;
+    background-color: #fcfbf8;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 40px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+a {
+    color: $body_font_color;
+}
+
+.title {
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.second-title {
+    font-size: 60px;
+    font-family: $sans_font_family;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.sub-title {
+    font-family: $sans_font_family;
+    font-weight: 700;
+    font-size: 18px;
+    color: $highlight_font_color;
+    margin: 0 0 60px;
+}
+
+.intratext-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+p {
+    margin: 20px 0;
+}
+
+.confirm_msg {
+    color: $msg_font_color;
+}
+
+.highlight_text {
+    color: $highlight_font_color
+}
+
+.copyright {
+    font-size: 14px;
+    font-family: $sans_font_family;
+    font-weight: 700;
+}

@@ -1,0 +1,47 @@
+
+[role="header"] {
+    ul {
+        list-style: none;
+        margin-top: 30px;
+        padding: 0;
+        line-height: 1;
+    }
+    li {
+        display: inline-block;
+        a {
+            margin: 0 15px;
+            font-family: $sans_font_family;
+            font-weight: bold;
+        }
+    }
+}
+
+[role="account-navigation"] {
+    float: right;
+    a {
+        font-size: 18px;
+    }
+    li {
+        &:not(:last-child):after {
+            content: "|";
+        }
+    }
+}
+
+[role="main-navigation"] {
+    width: 50%;
+    margin: 0 auto;
+    border-top: 1px solid $border_color;
+    text-align: center;
+    a {
+        font-size: 20px;
+    }
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    height: 166px;
+    margin: 15px auto;
+    background: url(../images/logo_marketing.png) 0 0 no-repeat;
+}

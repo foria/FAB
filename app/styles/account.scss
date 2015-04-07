@@ -4,11 +4,11 @@
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import "variables";
-@import "typography";
+@import "account/variables";
+@import "account/typography";
 @import "fontawesome/font-awesome";
-@import "header";
-@import "forms";
+@import "account/header";
+@import "account/forms";
 
 
 .browserupgrade {

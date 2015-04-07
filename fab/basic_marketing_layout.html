@@ -7,18 +7,14 @@
     <title>From a Birdie</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+    
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/account.css">
-    <!-- endbuild -->
+    <script src="//use.typekit.net/ahe2njm.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/marketing.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -27,29 +23,81 @@
 
     <header role="header">
       <div class="container">
+        <nav role="account-navigation">
+          <ul>
+            <li><a href="">Create An Album</a></li>
+            <li><a href="">Access An Album</a></li>
+          </ul>
+        </nav>
+
         <a href="/" title="Home Page" class="logo"></a>
-        <a href=" " title="Back To Site" class="pull-right">Back To Site</a>
+
+        <nav role="main-navigation">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Who It's For</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <div class="container" role="main">
 
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 class="big-title text-center">Hello Name of Person!</h1>
-          <h2 class="sub-title text-center">Welcome to the album of Walter White</h2>
-          <hr>
-          <p class="col-xs-10 col-xs-offset-1 text-center big-text">Here you can write a letter for Walter. Know that what you write here is private: it won't be posted anywhere, and only they will be able to see it.</p>
-          <p class="col-xs-10 col-xs-offset-1 text-center big-text"><a href="" class="btn btn-red">START WRITING YOUR ALBUM!</a></p>
+      <section>
+        <h1 class="title">Templates</h1>
+        <h2 class="sub-title">LIST OF TEMPLATES</h1>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <ul>
+              <li><a href="basic_account_layout.html">Basic Marketing Layout</a></li>
+              <!-- <li><a href="home.html">Home</a></li> -->
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
 
     </div>
 
     <footer role="footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12"><hr><p>© 2015 From A Birdie. All Rights Reserved.</p></div>
+          <div class="col-xs-3"><img src="images/logo_footer.png"></div>
+          <div class="col-xs-2">
+            <nav role="footer-navigation">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xs-2">
+            <nav role="social-navigation">
+              <ul>
+                <li><a href=""><i class="fa fa-facebook"></i>Facebook</a></li>
+                <li><a href=""><i class="fa fa-twitter"></i>Twitter</a></li>
+                <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
+                <li><a href=""><i class="fa fa-pinterest-p"></i>Pinterest</a></li>
+                <li><a href=""><i class="fa fa-google-plus"></i>Google +</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xs-4">
+            <h5 class="second-title">Newsletter</h5>
+            <p>Sign up for the newsletter to get the latest. No Spam ever.</p>
+            <form id="newsletter_subscription">
+              <fieldset>
+                <input type="email" placeholder="Your Email Address">
+              </fieldset>
+            </form>
+            <p class="copyright">© 2015 From A Birdie. All Rights Reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
@@ -64,11 +112,7 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="scripts/vendor.js"></script>
 
     <!-- build:js scripts/plugins.js
     <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
@@ -85,8 +129,6 @@
     <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>-->
     <!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <!-- endbuild -->
 </body>
 </html>
