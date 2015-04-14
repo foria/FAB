@@ -1,5 +1,4 @@
 
-
 body {
     color: $body_font_color;
     font-family: $body_font_family;
@@ -58,6 +57,9 @@ p {
     &.bigtext {
         font-size: 22px;
     }
+    &.biggertext {
+        font-size: 32px;
+    }
 }
 
 a {
@@ -69,9 +71,8 @@ ul {
 }
 
 .price {
-    font-size: 60px;
-    font-weight: 700;
-    display: block;
+    font-size: 40px;
+    @extend .sans-title;
 }
 
 .text-center {
@@ -88,6 +89,5 @@ ul {
 
 .copyright {
     font-size: 14px;
-    font-family: $sans_font_family;
-    font-weight: 700;
+    @extend .sans-title;
 }

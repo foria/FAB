@@ -43,11 +43,8 @@
       font-size: 80px;
       margin: 0 0 20px;
     }
-    p, .btn {
+    p {
       font-size: 22px;
-    }
-    .btn {
-      line-height: 64px;
     }
 }
 
@@ -77,6 +74,72 @@
   }
   img {
     box-shadow: 1px 1px 10px rgba(155, 155, 155, .6);
+  }
+}
+
+.events-list {
+  img {
+    height: 100px;
+  }
+}
+
+.prices-list {
+  h4 {
+      @extend .sans-title;
+      margin: 0;
+      line-height: 52px;
+  }
+  img {
+    width: 120%;
+    margin: 0 0 15px -10%;
+  }
+  > li {
+    background: white;
+    border-style: solid;
+    border-color: $border_color;
+    border-width: 1px 0 1px 1px;
+    overflow: hidden;
+    &:last-child {
+      border-width: 1px 1px 1px 1px;
+    }
+  }
+  ul {
+    border-bottom: 1px solid $border_color;
+    margin: 0;
+    padding: 0 0 15px;
+    li {
+      line-height: 2;
+    }
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.testimonials-list {
+  h5 {
+      @extend .sans-title;
+      margin: 0;
+      line-height: 1.6;
+      & + p {
+        color: $highlight_font_color;
+        margin-top: 0;
+      }
+  }
+  img {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px,
+  }
+  p {
+    &.quote {
+      font-style: italic;
+      margin-top: 0;
+      background: white;
+      padding: 25px;
+      border: 1px solid $border_color;
+    }
   }
 }
 

@@ -1,8 +1,14 @@
 
 [role="header"] {
+
+}
+
+[role="main-navigation"] {
+    float: right;
+
     ul {
         list-style: none;
-        margin: 30px 0;
+        margin: 0;
         padding: 0;
         line-height: 1;
     }
@@ -10,37 +16,28 @@
         display: inline-block;
         a {
             margin: 0 15px;
+            font-size: 18px;
             font-family: $sans_font_family;
             font-weight: bold;
+            line-height: 100px;
         }
-    }
-}
-
-[role="account-navigation"] {
-    float: right;
-    a {
-        font-size: 18px;
-    }
-    li {
-        &:not(:last-child):after {
-            content: "|";
+        &:first-child {
+            a {
+                margin-left: 0;
+            }
         }
-    }
-}
-
-[role="main-navigation"] {
-    width: 66.6666666667%;
-    margin: 0 auto;
-    border-top: 1px solid $border_color;
-    a {
-        font-size: 20px;
+        &:last-child {
+            a {
+                margin-right: 0;
+            }
+        }
     }
 }
 
 .logo {
+    float: left;
     display: block;
-    width: 200px;
-    height: 166px;
-    margin: 15px auto;
-    background: url(../images/logo_marketing.png) 0 0 no-repeat;
+    width: 197px;
+    height: 110px;
+    background: url(../images/logo_marketing.png) center no-repeat;
 }
