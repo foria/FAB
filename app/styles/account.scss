@@ -34,14 +34,21 @@ hr {
   background: white;
   padding: 40px;
   margin-bottom: 30px;
-  dt, dd {
-    font-weight: 700;
+  dt, dd, p {
     font-size: 20px;
+  }
+  dt, dd, a {
+    font-weight: 700;
+  }
+  dt, dd {
     float: left;
   }
-  dt {
+  dt, p a {
     color: $highlight_font_color;
     clear: left;
+  }
+  p a {
+    display: block;
   }
   dd {
     margin-left: 10px;
@@ -165,15 +172,46 @@ hr {
   }
 }
 
+.letter_thumbs {
+  @include clearfix;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  // margin-bottom: -30px;
+  // &:after {
+  //   margin-bottom: -30px;
+  // }
+  li {
+    margin-bottom: 30px;
+  }
+  a {
+    display: block;
+    padding: 15px;
+    background: white;
+    border: 1px solid $border_color;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 // HELPER CLASSES
 
 // to remove bottom margin in the case the element need to be attached to footer for example.
 .rbm {
   margin-bottom: -40px;
 }
+// to reset bottom margin in the case the element need to be attached to footer for example.
+.rsbm {
+  margin-bottom: 0;
+}
 // THIS ADD MARGIN TOP TO FIELDSET
 .atm {
   margin-top: 60px;
+}
+// THIS ADD MORE MARGIN TOP TO FIELDSET
+.amtm {
+  margin-top: 180px;
 }
 
 

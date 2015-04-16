@@ -26,9 +26,6 @@ a {
 
 .big-title {
     font-size: 42px;
-    &.text-center {
-        margin-top: 180px;
-    }
 }
 
 .sub-title {
@@ -71,7 +68,7 @@ p {
 }
 
 .highlight_text {
-    color: $highlight_font_color
+    color: $highlight_font_color;
 }
 
 .copyright {
