@@ -110,8 +110,12 @@ textarea,
   i[class*=left] {
     margin-right: 24px;
   }
-  + .btn {
-    margin-left: 20px;
+  &:not(.pull-right) {
+    margin-right: 10px;
+  }
+  + *:not([class*=pull]) {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -123,6 +127,19 @@ textarea,
 .btn-grey {
   background-color: $off_font_color;
 }
+
+.btn-fb {
+  color: white;
+  background: #3d62b3;
+  &:before {
+    @extend .fa;
+    content: "\f09a";
+    font-size: 1.5em;
+    margin-right: 15px;
+    vertical-align: sub;
+  }
+}
+
 
 /*!
  * Datepicker for Bootstrap

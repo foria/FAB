@@ -19,7 +19,7 @@
 }
 
 .container {
-  width: $container_width;
+  max-width: $container_width;
 }
 
 hr {
@@ -212,6 +212,11 @@ hr {
 // THIS ADD MORE MARGIN TOP TO FIELDSET
 .amtm {
   margin-top: 180px;
+}
+// THIS ADD MARGIN ON BOTH SIDE, USUALLY USED INSIDE CONTENTS ELEMENTS
+.mbt {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 

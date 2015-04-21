@@ -8,7 +8,7 @@ var reload = browserSync.reload;
 
 gulp.task('styles', function () {
   return gulp.src(['app/styles/account.scss', 'app/styles/marketing.scss'])
-    .pipe($.sourcemaps.init())
+    .pipe($.sourcemaps.init({sourceComments: 'map'}))
     .pipe($.sass({
       outputStyle: 'nested', // libsass doesn't support expanded yet
       precision: 10,
