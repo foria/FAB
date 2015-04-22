@@ -143,6 +143,23 @@
   }
 }
 
+.full-width {
+  position: relative;
+  margin-bottom: 30px;
+  img {
+    width: 100%;
+  }
+  figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    @extend .sans-title;
+    font-size: 30px;
+  }
+}
+
 // HELPER CLASSES
 
 // to remove bottom margin in the case the element need to be attached to footer for example.
