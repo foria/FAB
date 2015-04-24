@@ -45,41 +45,53 @@
       </div>
 
       <div class="title-bar">
-        <h1 class="container">About</h1>
+        <h1 class="container">Contact</h1>
       </div>
     </header>
 
     <div role="main">
 
-      <section class="container">
+      <form id ="contact" class="container">
 
-        <div class="row">
-          <div class="col-xs-12">
-            <figure class="full-width">
-              <img src="images/about.jpg">
-              <figcaption>Photo of Agustin & Anita</figcaption>
-            </figure>
+        <fieldset class="row">
+          <div class="col-md-12 contact-title">
+            <p class="paragraph-title">SEND US A MESSAGE</p>
+            <p>Have a question for us? Suggestion? Or  just want to say hi? Shoot us a message via the form below and
+we will be in touch as soon as possible!</p>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="row">
-          <div class="col-xs-12">
-            <p class="paragraph-title">
-              THE BIRDIE MISSION
-            </p>
-            <p>FromABirdie.com was created by Anita Licis-Ribak, an architect, photographer, musician, and all-around artist, and her husband Agustin Schapira, a computer scientist obsessed with making technology work for humans and not the other way around.</p>
-
-            <p>It all started in March of 2009, when Anita was reaching an, ehem, rather respectable age. Because she has lived in several cities, countries, and continents, Anita has friends and loved ones scattered all over the globe. "Wouldn't it be nice", Agustin thought, "to find a way to get in touch with all those people and invite them to prepare a collective surprise for her on the day of the birthday?".</p>
-
-            <p>That's how the first version of FromABirdie was born: Agustin created a website with a single page and invited Anita's friends to visit it and write a letter for her, promising that the letters would be kept private and only be seen by Anita. He also asked friends to pass the invitation along, hoping that it would reach friends of friends of friends whom he didn't even know about. And he was right: by the time Anita's birthday arrived, the website had 85 letters for her, from 35 different cities and 10 different countries. Letters from friends she hadn't seen in decades. Messages from people she had lost touch with and with whom she could re-connect. Imagine her surprise, and her joy. It was, she said, the best birthday present ever.</p>
-
-            <p>So, why not offer the same service to the general public? Wouldn't there be lots of people out there who would treasure letters from friends? FromABirdie.com was built on the belief that, in this age of quick, short, and careless digital communication, there are many who still prefer to sit down and write a detailed and thoughtful letter. We are here to help them write, store, deliver, preserve, and print those precious words.</p>
-
-            <p>We'd love to hear from you if you have questions, recommendations, ideas, or requests. <a href="mailto:">Contact us!</a></p>
+        <fieldset class="row">
+          <div  class="col-md-4">
+            <input type="text" name="first-name" placeholder="First Name">
           </div>
-        </div>
+          <div  class="col-md-4">
+            <input type="text" name="last-name" placeholder="Last Name">
+          </div>
+          <div  class="col-md-4">
+            <input type="email" name="email" placeholder="Email">
+          </div>
+        </fieldset>
 
-      </section>
+        <fieldset class="row">
+          <div class="col-md-12">
+            <input type="text" name="subject" placeholder="Message Subject">
+          </div>
+        </fieldset>
+
+        <fieldset class="row">
+          <div class="col-md-12">
+            <textarea rows="6" name="message" placeholder="Your Message"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="row">
+          <div class="col-md-12">
+            <input type="submit" class="btn btn-red" value="Send Message">
+          </div>
+        </fieldset>
+
+      </form>
 
     </div>
 

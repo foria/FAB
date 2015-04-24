@@ -21,7 +21,7 @@
 }
 
 .container {
-  width: $container_width;
+  max-width: $container_width;
   &.grey-bg {
     background: #f1efe9;
     box-shadow: -$container_width 0 0 #f1efe9, $container_width 0 0 #f1efe9
@@ -29,8 +29,13 @@
 }
 
 [role="main"] {
-  > section:not(.teaser) {
+  > *:not(.teaser) {
     padding: 50px 0;
+    > .row:last-child {
+      p{
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -158,6 +163,41 @@
     @extend .sans-title;
     font-size: 30px;
   }
+}
+
+[role="call-to-action"] {
+  text-align: center;
+  @extend .sans-title;
+  font-size: 32px;
+  border-top: 2px solid $border_color;
+  border-bottom: 2px solid $border_color;
+  a {
+    display: block;
+    padding: 50px 0;
+    color: $body_font_color;
+    &:hover {
+      background-color: $highlight_font_color;
+      color: white;
+      text-decoration: none;
+      i {
+        color: white;
+      }
+    }
+  }
+  i {
+    color: $highlight_font_color;
+  }
+}
+
+.contact-title {
+  background: url(../images/icon-envelope.png) center right no-repeat;
+  padding-right: 18%;
+}
+
+hr {
+  border-top: 2px solid $border_color;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 // HELPER CLASSES
