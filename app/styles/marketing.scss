@@ -12,6 +12,9 @@
 @import "marketing/footer";
 @import "marketing/forms";
 
+body {
+    background: #fcfbf8 url(../images/bg.jpg) 0 0 repeat;
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -30,12 +33,32 @@
 
 [role="main"] {
   > *:not(.teaser) {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    > .row:first-child {
+      > [class*="col"]{
+        > :first-child {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
     > .row:last-child {
       p{
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.saw-tooth {
+  background-image: linear-gradient(135deg, white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-135deg, white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(45deg, white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-45deg, white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  background-position: top center, top center, bottom center, bottom center, top center, bottom center;
+  background-size: 0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem, 100% 1rem, 100% 1rem;
+  background-repeat: repeat-x;
+  .teaser & {
+    margin: -200px 0;
+    padding: 200px 0;
   }
 }
 
@@ -186,6 +209,47 @@
   }
   i {
     color: $highlight_font_color;
+  }
+}
+
+.collapse-title {
+    text-align: left;
+    padding: 25px 0 25px 20px;
+    margin: 0;
+    border-bottom: 1px solid $border_color;
+    a {
+      color: $body_font_color;
+      display: block;
+      &:after {
+        @extend .fa;
+        font-size: 1.2em;
+        float: right;
+      }
+      &[aria-expanded="false"]:after {
+        content: "\f078";
+      }
+      &[aria-expanded="true"]:after  {
+        content: "\f077";
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+}
+
+.collapse-content-title {
+  font-size: 26px;
+  color: $highlight_font_color;
+}
+
+.well {
+  border: 0;
+  border-bottom: 1px solid $border_color;
+  box-shadow: none;
+  margin: 0;
+  > :first-child {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
