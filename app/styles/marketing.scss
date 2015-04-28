@@ -11,6 +11,7 @@
 @import "marketing/header";
 @import "marketing/footer";
 @import "marketing/forms";
+@import "marketing/jquery.fancybox";
 
 body {
     background: #fcfbf8 url(../images/bg.jpg) 0 0 repeat;
@@ -102,6 +103,9 @@ body {
   }
   img {
     box-shadow: 1px 1px 10px rgba(155, 155, 155, .6);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 

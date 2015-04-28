@@ -137,4 +137,11 @@ $(document).ready(function() {
         });
     }
 
+
+    // Fancybox init
+    // ======================
+    if($('.fancybox').length){
+        $('.fancybox').fancybox();
+    }
+
 })
