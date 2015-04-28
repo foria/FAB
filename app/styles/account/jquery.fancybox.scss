@@ -119,6 +119,7 @@ $fancybox-img-path : '' !default;
 	border-radius: 16px;
 	line-height: 30px;
 	padding-bottom: 2px;
+	text-decoration: none;
 	&:before {
 		content: "\f00d";
 	}

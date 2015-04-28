@@ -7,6 +7,11 @@ body {
     line-height: 1.6;
 }
 
+.sans-text {
+    font-family: $sans_font_family;
+    font-weight: 700;
+}
+
 h1, h2, h3 {
     margin: 40px 0;
 }
