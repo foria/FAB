@@ -2,6 +2,16 @@ $(document).ready(function() {
 
     'use strict';
 
+
+    // Flexslider init
+    // ======================
+    if($('.flexslider').length){
+        $('.flexslider').flexslider({
+            prevText: "",
+            nextText: ""
+        });
+    }
+
     // Calendar Date Picker
     // ======================
     var nowTemp = new Date();

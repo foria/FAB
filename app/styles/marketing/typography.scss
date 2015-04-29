@@ -81,6 +81,20 @@ ul {
     list-style: none;
 }
 
+.teaser {
+    &:not(.flexslider) {
+        padding: 200px 0;
+    }
+    p {
+      font-size: 22px;
+    }
+}
+.teaser--title {
+  @extend .sans-title;
+  font-size: 80px;
+  margin: 0 0 20px;
+}
+
 .price {
     font-size: 40px;
     @extend .sans-title;

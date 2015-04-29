@@ -12,6 +12,7 @@
 @import "marketing/footer";
 @import "marketing/forms";
 @import "marketing/jquery.fancybox";
+@import "marketing/jquery.flexslider";
 
 body {
     background: #fcfbf8 url(../images/bg.jpg) 0 0 repeat;
@@ -57,23 +58,22 @@ body {
   background-position: top center, top center, bottom center, bottom center, top center, bottom center;
   background-size: 0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem, 100% 1rem, 100% 1rem;
   background-repeat: repeat-x;
-  .teaser & {
-    margin: -200px 0;
-    padding: 200px 0;
-  }
 }
 
 .teaser {
-    padding: 200px 0;
-    background: center center no-repeat;
-    background-size: cover;
-    .teaser--title {
-      @extend .sans-title;
-      font-size: 80px;
-      margin: 0 0 20px;
-    }
-    p {
-      font-size: 22px;
+    picture {
+        display: block;
+        &:after {
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          @extend .saw-tooth;
+        }
     }
 }
 
@@ -100,6 +100,23 @@ body {
   margin-bottom: -50px;
   a {
     margin-bottom: 50px;
+    &:before {
+      @extend .fa;
+      content: "\f00e";
+      width: calc(100% - 29.5px);
+      height: 100%;
+      position: absolute;
+      background-color: $highlight_font_color;
+      opacity: .8;
+      font-size: 1.5em;
+      color: white;
+      text-align: center;
+      line-height: 204px;
+      visibility: hidden;
+    }
+    &:hover:before {
+      visibility: visible;
+    }
   }
   img {
     box-shadow: 1px 1px 10px rgba(155, 155, 155, .6);
@@ -129,10 +146,19 @@ body {
     background: white;
     border-style: solid;
     border-color: $border_color;
-    border-width: 1px 0 1px 1px;
+    border-width: 1px 1px 1px 1px;
     overflow: hidden;
+    transition: all .2s ease;
+    margin-right: -1px;
     &:last-child {
-      border-width: 1px 1px 1px 1px;
+      margin-right: 0;
+    }
+    &:hover {
+      position: relative;
+      z-index: 2;
+      width: 30%;
+      margin: -2.5%;
+      box-shadow: 0px 0px 10px rgba(155, 155, 155, .7);
     }
   }
   ul {
