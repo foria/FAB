@@ -11,6 +11,9 @@
 @import "account/forms";
 @import "account/jquery.fancybox";
 
+body {
+    background: #fcfbf8 url(../images/bg.jpg) 0 0 repeat;
+}
 
 .browserupgrade {
   margin: 0.2em 0;

@@ -154,4 +154,35 @@ $(document).ready(function() {
         $('.fancybox').fancybox();
     }
 
+
+    // Scroll down function
+    // ======================
+    $('.scroll-down').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+    });
+
+
+    // Carousel testimonials init
+    // ======================
+    if($('.testimonials').length){
+        $('.testimonials').flexslider({
+          animation: "slide",
+          animationLoop: false,
+          itemWidth: 323.4,
+          itemMargin: 0,
+          controlsContainer: $('.testimonials__nav'),
+          minItems: 3, // use function to pull in initial value
+          maxItems: 3 // use function to pull in initial value
+        });
+    }
+
 })
