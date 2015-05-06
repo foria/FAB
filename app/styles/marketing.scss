@@ -37,17 +37,15 @@ body {
   > *:not(.teaser) {
     padding-top: 50px;
     padding-bottom: 50px;
-    > .row:first-child {
+    > .row {
       > [class*="col"]{
         > :first-child {
           margin-top: 0;
           padding-top: 0;
         }
-      }
-    }
-    > .row:last-child {
-      p {
-        margin-bottom: 0;
+        > :last-child {
+          margin-bottom: 0;
+        }
       }
     }
     > .saw-tooth {
