@@ -6395,11 +6395,7 @@ body {
   background-repeat: repeat-x; }
 
 .teaser.flexslider {
-  padding: 200px 0; }
-  .teaser.flexslider > .saw-tooth, .teaser.flexslider > picture:after {
-    margin: -200px 0;
-    padding-top: 200px;
-    padding-bottom: 200px; }
+  padding: 0; }
 .teaser.newsletter {
   padding: 100px 0; }
   .teaser.newsletter > .saw-tooth, .teaser.newsletter > picture:after {
@@ -6416,7 +6412,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2; }
+    z-index: 2;
+    margin: 0;
+    padding-top: 200px;
+    padding-bottom: 200px; }
 
 .services-list {
   margin: 0;

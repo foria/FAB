@@ -65,12 +65,7 @@ body {
 
 .teaser {
     &.flexslider {
-      padding: 200px 0;
-      > .saw-tooth {
-        margin: -200px 0;
-        padding-top: 200px;
-        padding-bottom: 200px;
-      }
+      padding: 0;
     }
     &.newsletter {
       padding: 100px 0;
@@ -92,6 +87,9 @@ body {
           left: 0;
           z-index: 2;
           @extend .saw-tooth;
+          margin: 0;
+          padding-top: 200px;
+          padding-bottom: 200px;
         }
     }
 }
