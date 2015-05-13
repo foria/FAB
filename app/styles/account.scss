@@ -42,7 +42,7 @@ hr {
     font-size: 20px;
   }
   dt, dd, a {
-    font-weight: 700;
+    @extend .sans-text;
   }
   dt, dd {
     float: left;

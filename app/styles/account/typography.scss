@@ -13,7 +13,8 @@ body {
     font-weight: 700;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
+    @extend .sans-text;
     margin: 40px 0;
 }
 
@@ -27,6 +28,7 @@ a {
 }
 
 .title {
+    @extend .sans-text;
     font-size: 32px;
 }
 
