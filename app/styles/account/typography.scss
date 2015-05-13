@@ -80,7 +80,7 @@ p {
 }
 
 .copyright {
+    @extend .sans-text;
     color: #4e4e4d;
-    font-weight: 700;
     font-size: 14px;
 }
