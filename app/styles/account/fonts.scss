@@ -1,16 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
 
-$font-path: 'fonts';
+$font-path: '../fonts';
 $font-version: 1.0;
 
 @font-face {
   font-family: 'JaneAusten';
-  src: url('#{$font-path}/JaneAusten.eot?v=#{$font-version}');
-  src: url('#{$font-path}/JaneAusten.eot?#iefix&v=#{$font-version}') format('embedded-opentype'),
-    url('#{$font-path}/JaneAusten.woff2?v=#{$font-version}') format('woff2'),
-    url('#{$font-path}/JaneAusten.woff?v=#{$font-version}') format('woff'),
-    url('#{$font-path}/JaneAusten.ttf?v=#{$font-version}') format('truetype'),
-    url('#{$font-path}/JaneAusten.svg?v=#{$font-version}') format('svg');
+  src: url('../fonts/JaneAusten.eot?v=#{$font-version}');
+  src: url('../fonts/JaneAusten.eot?#iefix&v=#{$font-version}') format('embedded-opentype'),
+    url('../fonts/JaneAusten.woff?v=#{$font-version}') format('woff'),
+    url('../fonts/JaneAusten.ttf?v=#{$font-version}') format('truetype'),
+    url('../fonts/JaneAusten.svg?v=#{$font-version}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
