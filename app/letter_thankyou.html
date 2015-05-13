@@ -39,41 +39,46 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="big-title text-center sans-text">Letter From Agustin Schapira</h1>
-          <h2 class="sub-title text-center">Written on Friday, August 9th, 2014.</h2>
+          <h1 class="big-title text-center">Thank You!</h1>
+          <h2 class="sub-title text-center">Please Preview Your Contribution Before Posting</h2>
           <hr>
-          <p class="sans-text">Know that all the letters that you find here are private: they haven't been posted anywhere else, and only you will ever be able to see them (not even your friends could see each other's letters).</p>
-          <p class="sans-text">Know that all the letters that you find here are private: they haven't been posted anywhere else, and only you will ever be able to see them (not even your friends could see each other's letters).</p>
-          <p class="sans-text">Know that all the letters that you find here are private: they haven't been posted anywhere else, and only you will ever be able to see them (not even your friends could see each other's letters).</p>
-          <p class="sans-text">Know that all the letters that you find here are private: they haven't been posted anywhere else, and only you will ever be able to see them (not even your friends could see each other's letters).</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <ul class="letter_thumbs">
-          <li class="col-md-3"><a href="images/letter_placeholder.jpg" class="fancybox" rel="gallery"><img src="images/letter_placeholder.jpg"></a></li>
-          <li class="col-md-3"><a href="images/letter_placeholder.jpg" class="fancybox" rel="gallery"><img src="images/letter_placeholder.jpg"></a></li>
-          <li class="col-md-3"><a href="images/letter_placeholder.jpg" class="fancybox" rel="gallery"><img src="images/letter_placeholder.jpg"></a></li>
-          <li class="col-md-3"><a href="images/letter_placeholder.jpg" class="fancybox" rel="gallery"><img src="images/letter_placeholder.jpg"></a></li>
-        </ul>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-            <div class="highlight_msg">
-                <p class="text-center sans-text">Want to Thank Agustin Now? <a href="">Send a Reply Email</a></p>
+          <form role="tabpanel" class="tab-pane" id="wirte_letter">
+            <h2 class="second-title">A Little About You:</h2>
+            <div class="row">
+              <fieldset class="col-xs-6">
+                  <label for="name">Your Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Your Name">
+              </fieldset>
+              <fieldset class="col-xs-6">
+                  <label for="email">Your Email:</label>
+                  <input type="text" id="email" name="email" placeholder="Email Address">
+              </fieldset>
+              <fieldset class="col-xs-6">
+                  <label for="coming_from">Where Are You From?:</label>
+                  <input type="text" id="coming_from" name="coming_from" placeholder="Your City">
+              </fieldset>
+              <fieldset class="col-xs-6">
+                  <label for="relationship">Your Relationship to Walter:</label>
+                  <input type="text" id="relationship" name="relationship" placeholder="Relationship">
+              </fieldset>
             </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <p class="text-center"><em>1 of 22 Letters</em></p>
-          <hr>
-          <p>
-            <a href="" class="btn btn-red pull-left sans-text"><i class="fa fa-caret-left"></i>PREVIOUS LETTER!</a>
-            <a href="" class="btn btn-red pull-right sans-text">YOUR NEXT LETTER!<i class="fa fa-caret-right"></i></a>
-          </p>
+            <hr>
+            <h2 class="second-title">Write Down Your Thoughts:</h2>
+            <fieldset>
+                <label for="msg">What do you want to say to Walter?</label><a href="" class="highlight_text pull-right">Need some help on what to say?</a>
+                <textarea rows="6" id="msg" name="msg" placeholder="This is a greeting for friends to see before they start writing"></textarea>
+            </fieldset>
+            <hr>
+            <h2 class="second-title">Attach Images If You Have Any:</h2>
+            <p>Please make sure that they are good quality. If you are using a scanner please scan your photographs, drawings and documents as JPG files at 300dpi for images and at 600dpi for text.</p>
+            <fieldset>
+              < File Upload Plugin >
+              <!-- <input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple> -->
+            </fieldset>
+            <hr>
+            <button href="" class="btn btn-red">DELETE THIS CONTRIBUTION</button>
+            <a href="" class="btn btn-fb">INVITE FACEBOOK FRIENDS TO CONTRIBUTE</a>
+          </form>
         </div>
       </div>
 

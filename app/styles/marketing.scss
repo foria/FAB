@@ -64,14 +64,13 @@ body {
 }
 
 .teaser {
-    &:not(.flexslider),
-    &:not(.newsletter) {
-        padding: 200px 0;
-    }
-    &:not(.newsletter) > .saw-tooth {
-      margin: -200px 0;
-      padding-top: 200px;
-      padding-bottom: 200px;
+    &.flexslider {
+      padding: 200px 0;
+      > .saw-tooth {
+        margin: -200px 0;
+        padding-top: 200px;
+        padding-bottom: 200px;
+      }
     }
     &.newsletter {
       padding: 100px 0;
