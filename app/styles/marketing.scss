@@ -64,6 +64,23 @@ body {
 }
 
 .teaser {
+    &:not(.flexslider),
+    &:not(.newsletter) {
+        padding: 200px 0;
+    }
+    &:not(.newsletter) > .saw-tooth {
+      margin: -200px 0;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+    &.newsletter {
+      padding: 100px 0;
+      > .saw-tooth {
+        margin: -100px 0;
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
     picture {
         display: block;
         &:after {
@@ -77,11 +94,6 @@ body {
           z-index: 2;
           @extend .saw-tooth;
         }
-    }
-    > .saw-tooth {
-      margin: -200px 0;
-      padding-top: 200px;
-      padding-bottom: 200px;
     }
 }
 

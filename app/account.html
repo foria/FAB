@@ -7,11 +7,18 @@
     <title>From a Birdie</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/account.css">
+    <!-- endbuild -->
 
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -33,12 +40,15 @@
           <ul>
             <li><a href="basic_account_layout.html">Basic Account Layout</a></li>
             <li><a href="contributors.html">Contributors</a></li>
-            <li><a href="writing_letter.html">Write a letter</a></li>
+            <li><a href="letter_writing.html">Write a letter</a></li>
             <li><a href="thankyou.html">Thank you page</a></li>
             <li><a href="organizers.html">Organizers</a></li>
             <li><a href="recipients.html">Recipients</a></li>
             <li><a href="letter.html">Letter</a></li>
+            <li><a href="letter_writing.html">Letter Writing</a></li>
             <li><a href="letter_closing.html">Letter Closing</a></li>
+            <li><a href="thankyou.html">Thank you Page</a></li>
+            <li><a href="access_album.html">Access Album</a></li>
           </ul>
         </div>
       </div>
@@ -63,10 +73,28 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <script src="scripts/vendor.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-    <script src="scripts/plugins.js"></script>
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/flexslider/jquery.flexslider.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="scripts/bootstrap-datepicker.js"></script>
+    <script src="/bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/html5sortable/jquery.sortable.js"></script>
+    <script src="/bower_components/fancybox-scss/source/jquery.fancybox.js"></script>
+    <script src="/bower_components/jquery-file-upload/js/jquery.ui.widget.js"></script>
+    <script src="/bower_components/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+    <script src="/bower_components/jquery-file-upload/js/jquery.fileupload.js"></script>
+    <!-- endbuild -->
 
+    <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

@@ -62,6 +62,7 @@ label {
 
 [type=text],
 [type=number],
+[type=password],
 [type=email],
 textarea,
 .sortable li {
@@ -137,6 +138,23 @@ textarea,
     font-size: 1.5em;
     margin-right: 15px;
     vertical-align: sub;
+  }
+}
+
+.access_url_album {
+  &:before {
+    content: "http:// ";
+    display: inline-block;
+  }
+  &:after {
+    content: " fromabirdie.com";
+    display: inline-block;
+  }
+  input {
+    @extend .col-xs-9;
+    float: none;
+    display: inline-block;
+    margin: 0 1%;
   }
 }
 
