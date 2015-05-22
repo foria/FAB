@@ -258,8 +258,8 @@ body {
   text-align: center;
   @extend .sans-title;
   font-size: 32px;
-  border-top: 2px solid $border_color;
-  border-bottom: 2px solid $border_color;
+  border-top: 1px solid $border_color;
+  border-bottom: 1px solid $border_color;
   a {
     display: block;
     padding: 50px 0;

@@ -131,7 +131,7 @@ textarea,
 }
 
 .btn-fb {
-  color: white;
+  color: #fff;
   background: #3d62b3;
   &:before {
     @extend .fa;
@@ -139,6 +139,16 @@ textarea,
     font-size: 1.5em;
     margin-right: 15px;
     vertical-align: sub;
+  }
+}
+
+.btn-evenlope {
+  &:before {
+    @extend .fa;
+    content: "\f0e0";
+    font-size: 1.5em;
+    margin-right: 15px;
+    vertical-align: text-bottom;
   }
 }
 
