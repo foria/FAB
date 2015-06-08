@@ -45,6 +45,7 @@ fieldset {
 [type=email],
 textarea {
     border: 1px solid $border_color_forms;
+    border-radius: 4px;
     background-color: white;
     line-height: 50px;
     padding: 0 16px;

@@ -75,6 +75,12 @@ textarea,
     width: 100%;
 }
 
+textarea {
+  padding: 20px;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
 .inline-input {
     display: inline-block;
     margin-top: -16px;
@@ -130,6 +136,10 @@ textarea,
   background-color: $off_font_color;
 }
 
+.btn-bordered {
+  border: 1px solid $border_color_forms;
+}
+
 .btn-fb {
   color: #fff;
   background: #3d62b3;
@@ -153,13 +163,17 @@ textarea,
 }
 
 .access_url_album {
+  &:before, &:after {
+    font-size: 15px;
+    line-height: 62px;
+  }
   &:before {
     content: "http:// ";
-    display: inline-block;
+    float: left;
   }
   &:after {
     content: " fromabirdie.com";
-    display: inline-block;
+    float: right;
   }
   input {
     @extend .col-xs-9;
