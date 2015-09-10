@@ -66,6 +66,8 @@ body {
 .teaser {
     &.flexslider {
       padding: 0;
+      overflow: hidden;
+      min-height: 694px;
     }
     &.newsletter {
       padding: 100px 0;

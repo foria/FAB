@@ -15,6 +15,10 @@ body {
     background: #fcfbf8 url(../images/bg.jpg) 0 0 repeat;
 }
 
+a {
+  outline: none !important;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -196,6 +200,26 @@ hr {
     padding: 15px;
     background: white;
     border: 1px solid $border_color;
+    position: relative;
+    &:before {
+      @extend .fa;
+      content: "\f00e";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $highlight_font_color;
+      opacity: .8;
+      font-size: 1.5em;
+      color: white;
+      text-align: center;
+      line-height: 204px;
+      visibility: hidden;
+    }
+    &:hover:before {
+      visibility: visible;
+    }
     img {
       width: 100%;
     }
@@ -205,6 +229,10 @@ hr {
 .letter_contents {
   line-height: 1.4em;
   font-size: 1.6em;
+}
+
+.modal-backdrop {
+    bottom: 0;
 }
 
 // HELPER CLASSES

@@ -1,0 +1,81 @@
+
+
+body {
+    color: $body_font_color;
+    background-color: #fcfbf8;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 40px 0;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+a {
+    color: $body_font_color;
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.big-title {
+    font-size: 42px;
+    &.text-center {
+        margin-top: 180px;
+    }
+}
+
+.sub-title {
+    font-family: $alt_font_family;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: -20px;
+}
+
+.intratext-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+}
+
+[class*="title"] {
+    margin-bottom: 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.big-text, .second-title {
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 40px;
+}
+
+.confirm_msg {
+    color: $msg_font_color;
+}
+
+.highlight_text {
+    color: $highlight_font_color
+}
+
+.copyright {
+    color: #4e4e4d;
+    font-weight: 700;
+    font-size: 14px;
+}

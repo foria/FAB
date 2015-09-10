@@ -23,6 +23,9 @@
     a {
         color: white;
         text-decoration: none;
+        &:not(.logo){
+            margin-left: 13px;
+        }
     }
 }
 

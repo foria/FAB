@@ -1,0 +1,18 @@
+
+[role="header"] {
+    height: 91px;
+    line-height: 88px;
+    //background: url(../images/header_pattern.jpg) 0 0 repeat-x;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.logo {
+    background: url(../images/logo.png) 0 0 no-repeat;
+    width: 197px;
+    height: 61px;
+    display: inline-block;
+    vertical-align: middle;
+}
