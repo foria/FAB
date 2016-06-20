@@ -7,8 +7,8 @@ $(document).ready(function() {
     // ======================
     if($('.flexslider').length){
         $('.flexslider').flexslider({
-            prevText: "",
-            nextText: ""
+            prevText: '',
+            nextText: ''
         });
     }
 
@@ -175,7 +175,7 @@ $(document).ready(function() {
     // ======================
     if($('.testimonials').length){
         $('.testimonials').flexslider({
-          animation: "slide",
+          animation: 'slide',
           animationLoop: false,
           itemWidth: 323.4,
           itemMargin: 0,
