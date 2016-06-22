@@ -94,6 +94,11 @@ textarea {
   border: 0;
   border-radius: 0;
   font-size: 22px;
+
+  @media screen and (max-width: $bp-tablet) {
+      font-size: 16px;
+  }
+
   i {
     font-size: 1.45em;
     vertical-align: sub;
@@ -108,6 +113,12 @@ textarea {
 
 .btn-big {
   line-height: 64px;
+
+  @media screen and (max-width: $bp-tablet) {
+      line-height: 2;
+      white-space: normal;
+      padding: 10px 13px;
+  }
 }
 
 .btn-red {

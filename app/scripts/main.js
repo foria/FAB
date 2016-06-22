@@ -174,15 +174,37 @@ $(document).ready(function() {
     // Carousel testimonials init
     // ======================
     if($('.testimonials').length){
-        $('.testimonials').flexslider({
-          animation: 'slide',
-          animationLoop: false,
-          itemWidth: 323.4,
-          itemMargin: 0,
-          controlsContainer: $('.testimonials__nav'),
-          minItems: 3, // use function to pull in initial value
-          maxItems: 3 // use function to pull in initial value
-        });
+        if(window.innerWidth > 992){
+            $('.testimonials').flexslider({
+              animation: 'slide',
+              animationLoop: false,
+              itemWidth: 323.4,
+              itemMargin: 0,
+              controlsContainer: $('.testimonials__nav'),
+              minItems: 3, // use function to pull in initial value
+              maxItems: 3 // use function to pull in initial value
+            });
+        } else {
+            $('.testimonials').flexslider({
+              animation: 'slide',
+              animationLoop: false,
+              itemWidth: 290,
+              itemMargin: 0,
+              controlsContainer: $('.testimonials__nav')
+            });
+        }
+    }
+
+
+    // RESPONSIVE SCRIPTS
+    // ======================
+    if(window.innerWidth < 992){
+
+        // Menu
+        // ======================
+        $('.mobile-menu').click(function(){
+            $(this).parent().toggleClass('open-menu');
+        })
     }
 
 })

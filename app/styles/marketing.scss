@@ -18,6 +18,10 @@ body {
     background: #fcfbf8 url(../images/bg.jpg) 0 0 repeat;
 }
 
+img {
+  max-width: 100%;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -26,7 +30,9 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: $container_width;
+  overflow: hidden;
   &.grey-bg {
     background: #f1efe9;
     box-shadow: -$container_width 0 0 #f1efe9, $container_width 0 0 #f1efe9
@@ -37,6 +43,10 @@ body {
   > *:not(.teaser) {
     padding-top: 50px;
     padding-bottom: 50px;
+    @media screen and (max-width: $bp-tablet) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
     > .row {
       > [class*="col"]{
         > :first-child {
@@ -68,13 +78,29 @@ body {
       padding: 0;
       overflow: hidden;
       min-height: 694px;
+
+      @media screen and (max-width: $bp-tablet) {
+        min-height: 350px;
+        height: 370px;
+      }
     }
     &.newsletter {
       padding: 100px 0;
+
+      @media screen and (max-width: $bp-tablet) {
+        padding: 50px 0;
+      }
+
       > .saw-tooth {
         margin: -100px 0;
         padding-top: 100px;
         padding-bottom: 100px;
+
+        @media screen and (max-width: $bp-tablet) {
+          margin: -50px 0;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
       }
     }
     picture {
@@ -103,6 +129,11 @@ body {
     background: top center no-repeat;
     background-size: 80%;
     list-style-position: inside;
+
+    @media screen and (max-width: $bp-desktop) {
+      background-size: 40%;
+    }
+
     &:before {
       content: " ";
       display: block;
@@ -111,6 +142,10 @@ body {
   }
   h5 {
     margin-top: 230px;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin-top: 40%;
+    }
     @extend .sans-title;
   }
 }
@@ -146,12 +181,18 @@ body {
 }
 
 .events-list {
+  padding-left: 0;
   img {
     height: 100px;
+
+    @media screen and (max-width: $bp-tablet) {
+        height: 50px;
+    }
   }
 }
 
 .prices-list {
+  padding-left: 0;
   h4 {
       @extend .sans-title;
       margin: 0;
@@ -195,6 +236,9 @@ body {
 }
 
 .testimonials {
+  @media screen and (max-width: $bp-tablet) {
+    margin-bottom: 30px;
+  }
   .flex-direction-nav a {
     opacity: 1;
     &:before {
@@ -343,6 +387,11 @@ hr {
   z-index: 20;
   opacity: .7;
   transition: all .5s ease;
+
+  @media screen and (max-width: $bp-tablet) {
+      display: none;
+  }
+
   &:hover {
     bottom: 10px;
     color: white;
@@ -361,10 +410,4 @@ hr {
 }
 .white-text {
   color: white;
-}
-
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-
 }

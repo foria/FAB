@@ -81,20 +81,30 @@
 	  	li {
 		  	position: relative;
 	  	}
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-			height: 100%;
-			object-fit: cover;
-		}
-		figcaption {
-		  	position: relative;
-		  	z-index: 3;
-		  	padding: 200px 0;
-		}
+  		img {
+  			position: absolute;
+  			top: 0;
+  			left: 0;
+  			z-index: 1;
+  			height: 100%;
+  			object-fit: cover;
+  		}
+  		figcaption {
+  		  	position: relative;
+  		  	z-index: 3;
+  		  	padding: 200px 0;
+
+          @media screen and (max-width: $bp-tablet) {
+            padding: 30% 0 30%;
+          }
+  		}
   	}
+
+    @media screen and (max-width: $bp-tablet) {
+        p:first-child {
+          display: none;
+        }
+    }
   }
 }
 
@@ -242,6 +252,11 @@ html[xmlns] .flexslider .slides {
   bottom: 80px;
   text-align: center;
   z-index: 2;
+
+  @media screen and (max-width: $bp-tablet) {
+    bottom: 20px;
+  }
+
   li {
     margin: 0 6px;
     display: inline-block;
