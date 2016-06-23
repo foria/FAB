@@ -292,11 +292,17 @@ img {
   figcaption {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 0;
+    transform: translatey(-50%);
+    width: 100%;
+    text-align: center;
     color: white;
     @extend .sans-title;
     font-size: 30px;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -306,6 +312,10 @@ img {
   font-size: 32px;
   border-top: 1px solid $border_color;
   border-bottom: 1px solid $border_color;
+
+  @media screen and (max-width: $bp-tablet) {
+      font-size: 20px;
+  }
   a {
     display: block;
     padding: 50px 0;
@@ -332,10 +342,24 @@ img {
     a {
       color: $body_font_color;
       display: block;
+
+      @media screen and (max-width: $bp-tablet) {
+          position: relative;
+          padding-right: 25px;
+      }
+
       &:after {
         @extend .fa;
         font-size: 1.2em;
         float: right;
+
+        @media screen and (max-width: $bp-tablet) {
+            float: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translatey(-50%);
+        }
       }
       &[aria-expanded="false"]:after {
         content: "\f078";
@@ -352,6 +376,10 @@ img {
 .collapse-content-title {
   font-size: 26px;
   color: $highlight_font_color;
+
+  @media screen and (max-width: $bp-tablet) {
+    font-size: 18px;
+  }
 }
 
 .well {
@@ -368,6 +396,10 @@ img {
 .contact-title {
   background: url(../images/icon-envelope.png) center right no-repeat;
   padding-right: 18%;
+
+  @media screen and (max-width: $bp-tablet) {
+      background-size: 28%;
+  }
 }
 
 hr {

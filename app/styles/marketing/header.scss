@@ -1,6 +1,8 @@
 
 [role="header"] {
-    position: relative;
+    .container {
+        position: relative;
+    }
     .title-bar {
         background: url(../images/titlebar_pattern.jpg) 0 0 repeat;
     }
@@ -14,6 +16,11 @@
         margin-top: 0;
         margin-bottom: 0;
         opacity: 0.4;
+
+        @media screen and (max-width: $bp-tablet) {
+            font-size: 40px;
+            line-height: 70px;
+        }
     }
 }
 

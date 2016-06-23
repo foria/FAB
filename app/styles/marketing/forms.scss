@@ -1,6 +1,13 @@
 fieldset {
     position: relative;
     margin-bottom: 25px;
+
+    @media screen and (max-width: $bp-tablet) {
+      &:not(:first-child) {
+          margin-bottom: 0;
+      }
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -51,6 +58,11 @@ textarea {
     padding: 0 16px;
     display: block;
     width: 100%;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin-bottom: 25px !important;
+    }
+
     &:focus {
       border: 1px solid $border_color_forms;
       outline: 0;
