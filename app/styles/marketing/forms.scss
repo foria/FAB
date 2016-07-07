@@ -107,8 +107,8 @@ textarea {
   border-radius: 0;
   font-size: 22px;
 
-  @media screen and (max-width: $bp-tablet) {
-      font-size: 16px;
+  .txt-mobile {
+    display: none;
   }
 
   i {
@@ -121,6 +121,17 @@ textarea {
   i[class*=left] {
     margin-right: 24px;
   }
+
+  @media screen and (max-width: $bp-tablet) {
+      font-size: 16px;
+      .txt-desktop {
+        display: none;
+      }
+      .txt-mobile {
+        display: inline-block;
+      }
+  }
+
 }
 
 .btn-big {

@@ -122,6 +122,10 @@ img {
     }
 }
 
+.hp-icon {
+  margin-top: 20px;
+}
+
 .services-list {
   margin: 0;
   padding: 0;
@@ -398,7 +402,8 @@ img {
   padding-right: 18%;
 
   @media screen and (max-width: $bp-tablet) {
-      background-size: 28%;
+      background: none;
+      padding-right: 15px;
   }
 }
 
