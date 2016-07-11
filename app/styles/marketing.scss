@@ -32,7 +32,7 @@ img {
 .container {
   width: 100%;
   max-width: $container_width;
-  overflow: hidden;
+  //overflow: hidden;
   &.grey-bg {
     background: #f1efe9;
     box-shadow: -$container_width 0 0 #f1efe9, $container_width 0 0 #f1efe9
@@ -251,9 +251,19 @@ img {
   }
   .flex-direction-nav .flex-prev {
     left: -40px;
+
+    @media screen and (max-width: $bp-tablet) {
+      left: -25px;
+      width: 29px;
+    }
   }
   .flex-direction-nav .flex-next {
     right: -40px;
+
+    @media screen and (max-width: $bp-tablet) {
+      right: -25px;
+      width: 29px;
+    }
   }
   .flex-control-nav {
     bottom: -20px;

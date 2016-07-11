@@ -175,18 +175,21 @@ $(document).ready(function() {
     // ======================
     if($('.testimonials').length){
         var args = {
-          animation: 'slide',
-          animationLoop: false,
-          itemMargin: 0,
-          controlsContainer: $('.testimonials__nav'),
-          minItems: 3, // use function to pull in initial value
-          maxItems: 3 // use function to pull in initial value
+            animation: 'slide',
+            animationLoop: false,
+            itemMargin: 0,
+            controlsContainer: $('.testimonials__nav'),
+            prevText: '',
+            nextText: '',
+            minItems: 3, // use function to pull in initial value
+            maxItems: 3 // use function to pull in initial value
         };
         if(window.innerWidth > 992) {
             args.itemWidth = 323.4;
         } else if(window.innerWidth > 620) {
-            var width = $('.testimonials').width() / 3;
+            var width = ($('.testimonials').width()-200) / 3;
             args.itemWidth = width;
+            console.log(args);
         }
         $('.testimonials').flexslider(args);
     }
